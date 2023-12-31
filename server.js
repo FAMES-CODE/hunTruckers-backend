@@ -1,7 +1,8 @@
+const env = require('dotenv').config()
 const express = require('express');
 const cors = require('cors')
 const app = express();
-const PORT = 8888;
+const PORT = process.env.PORT;
 
 
 app.use(cors());
@@ -16,4 +17,5 @@ app.use('/vtc', vtcRoute);
 app.use('/player', playerRoute);
 app.listen(PORT, () => {
     console.log('listening on port ' + PORT);
+   
 })
