@@ -7,9 +7,7 @@ async function getUserData(req, res) {
     .get(url)
     .then((response) => {
       var data = response.data;
-      res.send({
-        data,
-      });
+      res.send([data]);
     })
     .catch((err) => {
       res.status(500).send({
