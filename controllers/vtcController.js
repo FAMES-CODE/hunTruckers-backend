@@ -25,9 +25,7 @@ async function getvtcDetails(req, res) {
     .get(url)
     .then((response) => {
       var data = response.data;
-      res.status(200).send({
-        data,
-      });
+      res.status(200).send([data]);
     })
     .catch((err) => {
       res.status(404).send({
