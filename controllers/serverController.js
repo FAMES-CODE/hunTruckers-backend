@@ -1,5 +1,10 @@
 const axios = require("axios");
 
+
+/* 
+Get servers Data 
+*/
+
 async function serversStats(req, res) {
   let url = "https://api.truckersmp.com/v2/servers";
 

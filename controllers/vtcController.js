@@ -1,5 +1,11 @@
 const axios = require("axios");
 
+
+/*
+
+Get random VTCS
+
+*/
 async function getVtcs(req, res) {
   let url = "https://api.truckersmp.com/v2/vtc";
 
@@ -18,6 +24,13 @@ async function getVtcs(req, res) {
     });
 }
 
+/*
+
+Get data of a specific VTC
+
+*/
+
+
 async function getvtcDetails(req, res) {
   let url = "https://api.truckersmp.com/v2/vtc/" + req.params.vid;
 
@@ -34,6 +47,11 @@ async function getvtcDetails(req, res) {
     });
 }
 
+/*
+
+Get all members of a VTC
+
+*/
 async function getvtcMembers(req, res) {
   let url = "https://api.truckersmp.com/v2/vtc/" + req.params.vid + "/members";
 
